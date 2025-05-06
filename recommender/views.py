@@ -193,7 +193,7 @@ def recs_fwls(request, user_id, num=6):
     return JsonResponse(data, safe=False)
 
 def recs_funksvd(request, user_id, num=6):
-    sorted_items = FunkSVDRecs().recommend_items(user_id, num)
+    sorted_items = FunkSVDRecs().recommend_items(user_id, num=6)
 
     data = {
         'user_id': user_id,
@@ -202,7 +202,7 @@ def recs_funksvd(request, user_id, num=6):
     return JsonResponse(data, safe=False)
 
 def recs_bpr(request, user_id, num=6):
-    sorted_items = BPRRecs().recommend_items(user_id, num)
+    sorted_items = BPRRecs().recommend_items(user_id, num=6)
 
     data = {
         'user_id': user_id,
